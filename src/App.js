@@ -14,36 +14,11 @@ function App() {
               alt="placeholder"
             />
           </Menu.Item>
-          <Menu.Item
-            name="home"
-            // active={activeItem === "home"}
-            // onClick={this.handleItemClick}
-            // link
-            // as={Link}
-            // to="/"
-          >
-            Home
-          </Menu.Item>
+          <Menu.Item name="home">Home</Menu.Item>
 
-          <Menu.Item
-            name="profile"
-            // active={activeItem === "testimonials"}
-            // onClick={this.handleItemClick}
-            // as={Link}
-            // to="/profile"
-          >
-            Profile
-          </Menu.Item>
+          <Menu.Item name="profile">Profile</Menu.Item>
 
-          <Menu.Item
-            name="sign-in"
-            // active={activeItem === "sign-in"}
-            // onClick={this.handleItemClick}
-            // as={Link}
-            // to="login"
-          >
-            Sign in
-          </Menu.Item>
+          <Menu.Item name="sign-in">Sign in</Menu.Item>
         </Menu>
       </header>
       {/* Top section */}
@@ -140,7 +115,7 @@ function App() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                border:'solid black'
+                border: "solid black"
               }}
             />
           </Grid.Column>
