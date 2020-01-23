@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Menu, Grid, Image } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react';
+import Header from '../Components/Header';
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,23 +15,7 @@ class Home extends Component {
     return (
       <div>
         <header>
-          <Router>
-            <Menu stackable>
-              <Menu.Item style={{ flexGrow: '1' }}>
-                <img src="https://react.semantic-ui.com/logo.png" alt="placeholder" />
-              </Menu.Item>
-              <Menu.Item name="home" link as={Link} to="/">
-                Home
-              </Menu.Item>
-              <Menu.Item name="profile" link as={Link} to="/profile">
-                Profile
-              </Menu.Item>
-
-              <Menu.Item name="sign-in" link as={Link} to="/sign-in">
-                Sign in
-              </Menu.Item>
-            </Menu>
-          </Router>
+          <Header />
         </header>
         {/* Top section */}
         <div style={{ border: 'solid black', padding: '2vw' }}>
