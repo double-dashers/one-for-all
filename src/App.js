@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Grid, Image } from 'semantic-ui-react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,16 +8,23 @@ function App() {
   return (
     <div>
       <header>
-        <Menu stackable>
-          <Menu.Item style={{ flexGrow: '1' }}>
-            <img src="https://react.semantic-ui.com/logo.png" alt="placeholder" />
-          </Menu.Item>
-          <Menu.Item name="home">Home</Menu.Item>
+        <Router>
+          <Menu stackable>
+            <Menu.Item style={{ flexGrow: '1' }}>
+              <img src="https://react.semantic-ui.com/logo.png" alt="placeholder" />
+            </Menu.Item>
+            <Menu.Item name="home" link as={Link} to="/">
+              Home
+            </Menu.Item>
+            <Menu.Item name="profile" link as={Link} to="/profile">
+              Profile
+            </Menu.Item>
 
-          <Menu.Item name="profile">Profile</Menu.Item>
-
-          <Menu.Item name="sign-in">Sign in</Menu.Item>
-        </Menu>
+            <Menu.Item name="sign-in" link as={Link} to="/sign-in">
+              Sign in
+            </Menu.Item>
+          </Menu>
+        </Router>
       </header>
       {/* Top section */}
       <div style={{ border: 'solid black', padding: '2vw' }}>
