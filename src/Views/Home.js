@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Menu, Grid, Image } from 'semantic-ui-react';
+import logo from './logo.svg';
+import './App.css';
 
 class Home extends Component {
   constructor(props) {
