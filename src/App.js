@@ -1,21 +1,22 @@
 import React from 'react';
-import { Menu, Grid, Image } from 'semantic-ui-react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './Views/Home';
+import Profile from './Views/Profile';
+import Login from './Views/Login';
 import './App.css';
 
 function App() {
   return (
     <div>
-     <Router>
-       <div>
-         <Switch>
-           <Route exact path='/' component={Home} />
-           <Route exact path='/profile' component={Profile} />
-           <Route exact path='/login' component={Login} />
-         </Switch>
-       </div>
-     </Router>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/login" component={Login} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
