@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Grid, Image } from 'semantic-ui-react';
-import Header from '../Components/Header';
 import logo from '../logo.svg';
 import '../App.css';
 
