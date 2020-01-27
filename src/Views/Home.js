@@ -14,9 +14,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <header>
-          <Header />
-        </header>
         {/* Top section */}
         <div style={{ border: 'solid black', padding: '2vw' }}>
           <Grid stackable columns={1}>
