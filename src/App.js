@@ -4,17 +4,20 @@ import Home from './Views/Home';
 import Profile from './Views/Profile';
 import Login from './Views/Login';
 import './App.css';
+import Layout from './Components/Layout';
 
 function App() {
   return (
     <div>
       <Router>
         <div>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/login" component={Login} />
-          </Switch>
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/login" component={Login} />
+            </Switch>
+          </Layout>
         </div>
       </Router>
     </div>

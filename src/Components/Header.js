@@ -21,7 +21,7 @@ class Header extends Component {
         <Menu.Item name="profile" link as={Link} to="/profile">
           Profile
         </Menu.Item>
-        <Menu.Item name="sign-in" link as={Link} to="/sign-in">
+        <Menu.Item name="sign-in" link as={Link} to="/login">
           Sign in
         </Menu.Item>
       </Menu>

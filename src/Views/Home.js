@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Image } from 'semantic-ui-react';
-import Header from '../Components/Header';
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 
 class Home extends Component {
   constructor(props) {
@@ -14,9 +13,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <header>
-          <Header />
-        </header>
         {/* Top section */}
         <div style={{ border: 'solid black', padding: '2vw' }}>
           <Grid stackable columns={1}>
