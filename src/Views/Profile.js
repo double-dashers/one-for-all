@@ -16,14 +16,21 @@ class Profile extends Component {
           stackable
           doubling
           columns={2}
-          textAlign="center"
+         
           style={{
             height: '100vh',
             display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
           }}
-          verticalAlign="middle"
+          
         >
-          <Grid.Column computer={4}>
+          <Grid.Column style={{
+            
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }} computer={4}>
             <Card>
               <Image
                 src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
@@ -47,7 +54,12 @@ class Profile extends Component {
               </Card.Content>
             </Card>
           </Grid.Column>
-          <Grid.Column computer={8}>
+          <Grid.Column style={{
+            
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }} computer={8}>
             <Container fluid text>
               <Header as="h2">El Profile</Header>
               <p>
