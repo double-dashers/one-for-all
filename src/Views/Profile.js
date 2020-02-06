@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 
 class Profile extends Component {
   constructor(props) {
@@ -10,22 +10,11 @@ class Profile extends Component {
 
   render() {
     return (
-      <div>
-        <Grid
-          container
-          stackable
-          doubling
-          columns={2}
-          style={{
-            height: '100vh',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+      <Container>
+        <Grid stackable columns={2}>
           Something here
         </Grid>
-      </div>
+      </Container>
     );
   }
 }
