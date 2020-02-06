@@ -13,9 +13,18 @@ class Profile extends Component {
       <Container fluid>
         <Grid stackable columns={2}>
           <Grid.Column mobile={16} tablet={6} computer={6}>
-            <Segment>
-              <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-            </Segment>
+            <Grid.Row>
+              <Grid.Column mobile={16} tablet={16} computer={16}>
+                <Segment>
+                  <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                </Segment>
+              </Grid.Column>
+              <Grid.Column mobile={16} tablet={16} computer={16} style={{ marginTop: '2vw' }}>
+                <Segment>
+                  <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
+                </Segment>
+              </Grid.Column>
+            </Grid.Row>
           </Grid.Column>
           <Grid.Column mobile={16} tablet={10} computer={10}>
             <Segment>
