@@ -10,7 +10,7 @@ class Profile extends Component {
 
   render() {
     return (
-      <Container>
+      <Container fluid>
         <Grid stackable columns={2}>
           <Grid.Column mobile={16} tablet={6} computer={6}>
             <Segment>
