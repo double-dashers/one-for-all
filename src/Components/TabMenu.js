@@ -38,7 +38,9 @@ const panes = [
 ];
 
 const TabMenu = () => {
-  return <Tab menu={{ attached: true, secondary: true, pointing: true }} panes={panes} />;
+  return (
+    <Tab menu={{ attached: true, secondary: true, pointing: true, color: 'teal' }} panes={panes} />
+  );
 };
 
 export default TabMenu;
