@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Container, Segment, Image } from 'semantic-ui-react';
+import TabMenu from '../Components/TabMenu';
 
 class Profile extends Component {
   constructor(props) {
@@ -27,9 +28,7 @@ class Profile extends Component {
             </Grid.Row>
           </Grid.Column>
           <Grid.Column mobile={16} tablet={10} computer={10}>
-            <Segment>
-              <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-            </Segment>
+            <TabMenu />
           </Grid.Column>
         </Grid>
       </Container>
