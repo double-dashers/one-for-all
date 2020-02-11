@@ -3,7 +3,7 @@ import { Card, List, Checkbox } from 'semantic-ui-react';
 
 const CurrentlyCard = () => {
   return (
-    <Card>
+    <Card fluid>
       <Card.Content>
         <Card.Header>My current list</Card.Header>
         <List>
