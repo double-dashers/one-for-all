@@ -4,20 +4,20 @@ import { Feed } from 'semantic-ui-react';
 const events = [
   {
     date: '1 Hour Ago',
-    image: '/images/avatar/small/elliot.jpg',
+    image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
     meta: '4 Likes',
     summary: 'Elliot Fu added you as a friend',
   },
   {
     date: '4 days ago',
-    image: '/images/avatar/small/helen.jpg',
+    image: 'https://react.semantic-ui.com/images/avatar/small/helen.jpg',
     meta: '1 Like',
     summary: 'Helen Troy added 2 new illustrations',
     extraImages: ['/images/wireframe/image.png', '/images/wireframe/image-text.png'],
   },
   {
     date: '3 days ago',
-    image: '/images/avatar/small/joe.jpg',
+    image: 'https://react.semantic-ui.com/images/avatar/small/joe.jpg',
     meta: '8 Likes',
     summary: 'Joe Henderson posted on his page',
     extraText:
@@ -25,11 +25,14 @@ const events = [
   },
   {
     date: '4 days ago',
-    image: '/images/avatar/small/justen.jpg',
+    image: 'https://react.semantic-ui.com/images/avatar/small/justen.jpg',
     meta: '41 Likes',
     summary: 'Justen Kitsune added 2 new photos of you',
     extraText: 'Look at these fun pics I found from a few years ago. Good times.',
-    extraImages: ['/images/wireframe/image.png', '/images/wireframe/image-text.png'],
+    extraImages: [
+      'https://react.semantic-ui.com/images/wireframe/image.png',
+      'https://react.semantic-ui.com/mages/wireframe/image-text.png',
+    ],
   },
 ];
 const ActivityFeed = () => {
