@@ -9,7 +9,7 @@ const CurrentItem = props => {
       <Item.Content verticalAlign="middle">
         <Item.Header>
           {name}
-          <Icon color={platform} name="game" />
+          <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
         </Item.Header>
         <Item.Description>{description}</Item.Description>
         <Item.Extra>
