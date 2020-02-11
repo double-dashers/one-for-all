@@ -60,7 +60,7 @@ const events = [
   },
 ];
 const ActivityFeed = () => {
-  return <Feed events={events} />;
+  return <Feed size="large" events={events} />;
 };
 
 export default ActivityFeed;
