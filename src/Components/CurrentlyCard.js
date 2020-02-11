@@ -4,7 +4,7 @@ import CurrentItem from './CurrentItem';
 
 const CurrentlyCard = () => {
   return (
-    <Card fluid>
+    <Card raised fluid>
       <Card.Content>
         <Card.Header>My current list</Card.Header>
         <Item.Group divided>
