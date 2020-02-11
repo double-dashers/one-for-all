@@ -21,7 +21,12 @@ class Profile extends Component {
                   <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
                 </Segment>
               </Grid.Column>
-              <Grid.Column mobile={16} tablet={16} computer={16} style={{ marginTop: '2vw' }}>
+              <Grid.Column
+                mobile={16}
+                tablet={16}
+                computer={16}
+                style={{ marginTop: '2vw', maxHeight: '250px', overflow: 'auto' }}
+              >
                 <CurrentlyCard />
               </Grid.Column>
             </Grid.Row>
