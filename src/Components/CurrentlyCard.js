@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Item, Icon, Rating } from 'semantic-ui-react';
+import { Card, Item } from 'semantic-ui-react';
+import CurrentItem from './CurrentItem';
 
 const CurrentlyCard = () => {
   return (
@@ -7,46 +8,26 @@ const CurrentlyCard = () => {
       <Card.Content>
         <Card.Header>My current list</Card.Header>
         <Item.Group divided>
-          <Item>
-            <Item.Content verticalAlign="middle">
-              <Item.Header>
-                Animal Crossing: New Horizons
-                <Icon color="red" name="game" />
-              </Item.Header>
-              <Item.Description>
-                Animal Crossing: New Horizons is an upcoming life simulation video game developed
-                and published by Nintendo. A part of the Animal Crossing series, it is set to be
-                released for the Nintendo Switch on March 20, 2020.
-              </Item.Description>
-              <Item.Extra>
-                <Rating icon="heart" maxRating={5} clearable />
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content verticalAlign="middle">
-              <Item.Header>
-                Persona 5: The Royal
-                <Icon color="blue" name="game" />
-              </Item.Header>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content verticalAlign="middle">
-              <Item.Header>
-                Final Fantasy VII Remake
-                <Icon color="blue" name="game" />
-              </Item.Header>
-            </Item.Content>
-          </Item>
-          <Item>
-            <Item.Content verticalAlign="middle">
-              <Item.Header>
-                Astral Chain
-                <Icon color="red" name="game" />
-              </Item.Header>
-            </Item.Content>
-          </Item>
+          <CurrentItem
+            name="Animal Crossing: New Horizons"
+            platform="red"
+            description="Animal Crossing: New Horizons is an upcoming life simulation video game developed and
+          published by Nintendo. A part of the Animal Crossing series, it is set to be released for
+          the Nintendo Switch on March 20, 2020."
+          />
+          <CurrentItem
+            name="Persona 5: The Royal"
+            platform="blue"
+            description="Persona 5 Royal features an additional Phantom Thief member named Kasumi Yoshizawa, a new Palace, new music, 
+            additional plot and social elements, a playable third semester, and support for the 
+            PlayStation 4 Pro, alongside many other changes and additions."
+          />
+          <CurrentItem
+            name="Granblue Versus"
+            platform="blue"
+            description="Granblue Fantasy Versus is a 2.5D fighting game developed by 
+            Arc System Works for the PlayStation 4. It is based on the role-playing game Granblue Fantasy."
+          />
         </Item.Group>
       </Card.Content>
     </Card>
