@@ -7,7 +7,7 @@ const CurrentlyCard = () => {
     <Card raised fluid>
       <Card.Content>
         <Card.Header>My current list</Card.Header>
-        <Item.Group divided>
+        <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto' }}>
           <CurrentItem
             name="Animal Crossing: New Horizons"
             platform="red"
