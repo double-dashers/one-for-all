@@ -15,7 +15,7 @@ class Layout extends Component {
       <div>
         <Header />
         <div>
-          <main>{children}</main>
+          <main style={{ padding: '2vw' }}>{children}</main>
         </div>
       </div>
     );
