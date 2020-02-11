@@ -14,7 +14,7 @@ const CurrentItem = props => {
         <Item.Description>{description}</Item.Description>
         <Item.Extra>
           {progress ? (
-            <Progress percent={35} indicating progress style={{ paddingBottom: '10px' }}>
+            <Progress percent={35} indicating progress size="small">
               Current progress
             </Progress>
           ) : (
