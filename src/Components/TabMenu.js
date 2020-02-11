@@ -6,7 +6,7 @@ const panes = [
   {
     menuItem: 'Activity',
     render: () => (
-      <Tab.Pane attached="top">
+      <Tab.Pane attached="top" style={{ maxHeight: '600px', overflow: 'auto' }}>
         <ActivityFeed />
       </Tab.Pane>
     ),

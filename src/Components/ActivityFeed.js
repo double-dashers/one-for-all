@@ -13,7 +13,10 @@ const events = [
     image: 'https://react.semantic-ui.com/images/avatar/small/helen.jpg',
     meta: '1 Like',
     summary: 'Helen Troy added 2 new illustrations',
-    extraImages: ['/images/wireframe/image.png', '/images/wireframe/image-text.png'],
+    extraImages: [
+      'https://react.semantic-ui.com/images/wireframe/image.png',
+      'https://react.semantic-ui.com/images/wireframe/image-text.png',
+    ],
   },
   {
     date: '3 days ago',
@@ -31,20 +34,8 @@ const events = [
     extraText: 'Look at these fun pics I found from a few years ago. Good times.',
     extraImages: [
       'https://react.semantic-ui.com/images/wireframe/image.png',
-      'https://react.semantic-ui.com/mages/wireframe/image-text.png',
+      'https://react.semantic-ui.com/images/wireframe/image-text.png',
     ],
-  },
-  {
-    date: '1 Hour Ago',
-    image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
-    meta: '4 Likes',
-    summary: 'Elliot Fu added you as a friend',
-  },
-  {
-    date: '1 Hour Ago',
-    image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
-    meta: '4 Likes',
-    summary: 'Elliot Fu added you as a friend',
   },
   {
     date: '1 Hour Ago',
