@@ -1,15 +1,13 @@
 import React from 'react';
 import { Tab, Segment, Image } from 'semantic-ui-react';
+import ActivityFeed from './ActivityFeed';
 
 const panes = [
   {
     menuItem: 'Activity',
     render: () => (
-      <Tab.Pane attached="top">
-        <Segment>
-          Tab 1 Content
-          <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-        </Segment>
+      <Tab.Pane attached="top" style={{ maxHeight: '600px', overflow: 'auto' }}>
+        <ActivityFeed />
       </Tab.Pane>
     ),
   },
