@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Card, Item, Button, Icon } from 'semantic-ui-react';
+import { Card, Item, Button, Icon, Modal, Header, Image } from 'semantic-ui-react';
 import CurrentItem from './CurrentItem';
-import AddGameModal from './AddGameModal';
 
 const staticItems = [
   {
@@ -80,6 +79,11 @@ const CurrentlyCard = () => {
     setModal(true);
   }
 
+  function closeModal() {
+    console.log('opening modal');
+    setModal(false);
+  }
+
   function addItem() {
     const newItems = [...items, newItem];
     setItem(newItems);
@@ -91,15 +95,32 @@ const CurrentlyCard = () => {
         <Card.Header
           style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
         >
-          My current list{' '}
-          <AddGameModal
+          My current list
+          <Modal
             trigger={
               <Button circular icon color="teal" onClick={openModal}>
                 <Icon name="add circle" />
               </Button>
             }
-            isOpen={modal}
-          />
+            open={modal}
+            onClose={closeModal}
+          >
+            <Modal.Header>Select a Photo</Modal.Header>
+            <Modal.Content image>
+              <Image
+                wrapped
+                size="medium"
+                src="https://react.semantic-ui.com/images/avatar/large/rachel.png"
+              />
+              <Modal.Description>
+                <Header>Default Profile Image</Header>
+                <p>
+                  We have found the following gravatar image associated with your e-mail address.
+                </p>
+                <p>Is it okay to use this photo?</p>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
         </Card.Header>
         <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto', paddingTop: '5px' }}>
           {items.map((item, index) => (
