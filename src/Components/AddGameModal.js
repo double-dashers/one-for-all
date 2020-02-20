@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Header, Image, Modal } from 'semantic-ui-react';
 
-const AddGameModal = () => {
+const AddGameModal = props => {
+  const { trigger } = props;
   const [show, setShow] = useState(false);
 
   function handleOpen() {
@@ -13,11 +14,7 @@ const AddGameModal = () => {
   }
 
   return (
-    <Modal
-      trigger={<Button onClick={handleOpen}>Show Modal</Button>}
-      open={show}
-      onClose={handleClose}
-    >
+    <Modal trigger={trigger} open={show} onClose={handleClose}>
       <Modal.Header>Select a Photo</Modal.Header>
       <Modal.Content image>
         <Image
