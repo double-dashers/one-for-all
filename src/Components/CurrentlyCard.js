@@ -49,7 +49,7 @@ const CurrentlyCard = () => {
             <Icon name="add circle" />
           </Button>
         </Card.Header>
-        <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto' }}>
+        <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto', paddingTop: '5px' }}>
           {items.map(item => (
             <CurrentItem
               key={item.name}
