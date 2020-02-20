@@ -15,7 +15,7 @@ const CurrentItem = props => {
             <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
           </div>
           <Button size="mini" circular icon color="red">
-            <Icon name="remove circle" />
+            <Icon name="remove" />
           </Button>
         </Item.Header>
         <Item.Description>{description}</Item.Description>
