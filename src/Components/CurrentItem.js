@@ -7,12 +7,14 @@ const CurrentItem = props => {
   return (
     <Item>
       <Item.Content verticalAlign="middle">
-        <Item.Header>
+        <Item.Header
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+        >
           <div>
             {name}
             <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
           </div>
-          <Button circle icon>
+          <Button size="mini" circular icon color="red">
             <Icon name="remove circle" />
           </Button>
         </Item.Header>
