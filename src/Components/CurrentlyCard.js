@@ -34,7 +34,8 @@ const CurrentlyCard = () => {
   ]);
 
   function addItem() {
-    const newItems = [...items, {}];
+    const newItems = [...items, { newItem }];
+    setItem(newItems);
     console.log('item was added!');
   }
 
