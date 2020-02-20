@@ -33,8 +33,10 @@ const CurrentlyCard = () => {
     },
   ]);
 
-  function deleteItem() {
-    console.log('item is deleted!');
+  function deleteItem(index) {
+    const newItems = [...items];
+    newItems.splice(index, 1);
+    setItem(newItems);
   }
 
   function addItem() {
