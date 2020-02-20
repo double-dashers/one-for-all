@@ -86,9 +86,13 @@ const CurrentlyCard = () => {
           style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
         >
           My current list{' '}
-          <Button circular icon color="teal" onClick={addItem}>
-            <Icon name="add circle" />
-          </Button>
+          <AddGameModal
+            trigger={
+              <Button circular icon color="teal" onClick={addItem}>
+                <Icon name="add circle" />
+              </Button>
+            }
+          />
         </Card.Header>
         <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto', paddingTop: '5px' }}>
           {items.map((item, index) => (
@@ -103,7 +107,6 @@ const CurrentlyCard = () => {
           ))}
         </Item.Group>
       </Card.Content>
-      <AddGameModal />
     </Card>
   );
 };
