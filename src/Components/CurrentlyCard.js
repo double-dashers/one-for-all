@@ -66,12 +66,18 @@ const CurrentlyCard = () => {
         'Granblue Fantasy Versus is a 2.5D fighting game developed by Arc System Works for the PlayStation 4. It is based on the role-playing game Granblue Fantasy.',
     },
   ]);
+  const [modal, setModal] = useState(false);
 
   function deleteItem() {
     const { value } = this;
     const newItems = [...items];
     newItems.splice(value, 1);
     setItem(newItems);
+  }
+
+  function openModal() {
+    console.log('opening modal');
+    setModal(true);
   }
 
   function addItem() {
@@ -88,10 +94,11 @@ const CurrentlyCard = () => {
           My current list{' '}
           <AddGameModal
             trigger={
-              <Button circular icon color="teal" onClick={addItem}>
+              <Button circular icon color="teal" onClick={openModal}>
                 <Icon name="add circle" />
               </Button>
             }
+            isOpen={modal}
           />
         </Card.Header>
         <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto', paddingTop: '5px' }}>

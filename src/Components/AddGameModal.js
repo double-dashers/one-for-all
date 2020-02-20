@@ -2,19 +2,15 @@ import React, { useState } from 'react';
 import { Header, Image, Modal } from 'semantic-ui-react';
 
 const AddGameModal = props => {
-  const { trigger } = props;
-  const [show, setShow] = useState(false);
-
-  function handleOpen() {
-    setShow(true);
-  }
+  const { trigger, isOpen } = props;
+  const [show, setShow] = useState(isOpen);
 
   function handleClose() {
     setShow(false);
   }
 
   return (
-    <Modal trigger={trigger} open={show} onClose={handleClose}>
+    <Modal trigger={trigger} open={isOpen} onClose={handleClose}>
       <Modal.Header>Select a Photo</Modal.Header>
       <Modal.Content image>
         <Image
