@@ -10,7 +10,7 @@ const CurrentlyCard = () => {
           style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
         >
           My current list{' '}
-          <Button icon>
+          <Button circular icon color="teal">
             <Icon name="add circle" />
           </Button>
         </Card.Header>
