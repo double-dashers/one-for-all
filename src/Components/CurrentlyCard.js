@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Item, Button, Icon } from 'semantic-ui-react';
 import CurrentItem from './CurrentItem';
+import AddGameModal from './AddGameModal';
 
 const staticItems = [
   {
@@ -102,6 +103,7 @@ const CurrentlyCard = () => {
           ))}
         </Item.Group>
       </Card.Content>
+      <AddGameModal />
     </Card>
   );
 };
