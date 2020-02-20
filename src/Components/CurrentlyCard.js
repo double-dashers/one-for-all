@@ -6,7 +6,9 @@ const CurrentlyCard = () => {
   return (
     <Card raised fluid>
       <Card.Content>
-        <Card.Header>
+        <Card.Header
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+        >
           My current list{' '}
           <Button icon>
             <Icon name="add circle" />
