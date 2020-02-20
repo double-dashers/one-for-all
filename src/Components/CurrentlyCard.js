@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Card, Item, Button, Icon, Modal, Header, Image } from 'semantic-ui-react';
+import { Card, Item, Button, Icon, Modal } from 'semantic-ui-react';
 import CurrentItem from './CurrentItem';
+import AddGameForm from './AddGameForm';
 
 const staticItems = [
   {
@@ -105,20 +106,9 @@ const CurrentlyCard = () => {
             open={modal}
             onClose={closeModal}
           >
-            <Modal.Header>Select a Photo</Modal.Header>
-            <Modal.Content image>
-              <Image
-                wrapped
-                size="medium"
-                src="https://react.semantic-ui.com/images/avatar/large/rachel.png"
-              />
-              <Modal.Description>
-                <Header>Default Profile Image</Header>
-                <p>
-                  We have found the following gravatar image associated with your e-mail address.
-                </p>
-                <p>Is it okay to use this photo?</p>
-              </Modal.Description>
+            <Modal.Header>Select a game to add!</Modal.Header>
+            <Modal.Content>
+              <AddGameForm />
             </Modal.Content>
           </Modal>
         </Card.Header>
