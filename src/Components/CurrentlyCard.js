@@ -54,13 +54,14 @@ const CurrentlyCard = () => {
           </Button>
         </Card.Header>
         <Item.Group divided style={{ maxHeight: '250px', overflow: 'auto', paddingTop: '5px' }}>
-          {items.map(item => (
+          {items.map((item, index) => (
             <CurrentItem
               key={item.name}
               name={item.name}
               description={item.description}
               platform={item.platform}
               deleteItem={deleteItem}
+              index={index}
             />
           ))}
         </Item.Group>
