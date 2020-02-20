@@ -4,7 +4,6 @@ import TabMenu from '../Components/TabMenu';
 import CurrentlyCard from '../Components/CurrentlyCard';
 import UserProfileCard from '../Components/UserProfileCard';
 
-
 class Profile extends Component {
   constructor(props) {
     super(props);

@@ -6,6 +6,8 @@ const UserProfileCard = () => {
     <Card.Group centered itemsPerRow={2}>
       <Card>
         <Image
+          size="small"
+          floated="left"
           src="https://react.semantic-ui.com/images/avatar/large/matthew.png"
           wrapped
           ui={false}
