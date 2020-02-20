@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Item, Rating, Icon, Progress } from 'semantic-ui-react';
+import { Item, Rating, Icon, Progress, Button } from 'semantic-ui-react';
 
 const CurrentItem = props => {
   const { name, description, platform, progress } = props;
@@ -8,8 +8,13 @@ const CurrentItem = props => {
     <Item>
       <Item.Content verticalAlign="middle">
         <Item.Header>
-          {name}
-          <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
+          <div>
+            {name}
+            <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
+          </div>
+          <Button circle icon>
+            <Icon name="remove circle" />
+          </Button>
         </Item.Header>
         <Item.Description>{description}</Item.Description>
         <Item.Extra>
