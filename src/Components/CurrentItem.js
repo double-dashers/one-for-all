@@ -14,7 +14,7 @@ const CurrentItem = props => {
             {name}
             <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
           </div>
-          <Button size="mini" circular icon color="red" onClick={deleteItem}>
+          <Button value={index} size="mini" circular icon color="red" onClick={deleteItem}>
             <Icon name="remove" />
           </Button>
         </Item.Header>

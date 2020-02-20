@@ -33,9 +33,10 @@ const CurrentlyCard = () => {
     },
   ]);
 
-  function deleteItem(index) {
+  function deleteItem() {
+    const { value } = this;
     const newItems = [...items];
-    newItems.splice(index, 1);
+    newItems.splice(value, 1);
     setItem(newItems);
   }
 
