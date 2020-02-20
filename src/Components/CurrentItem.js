@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Item, Rating, Icon, Progress, Button } from 'semantic-ui-react';
 
 const CurrentItem = props => {
-  const { name, description, platform, progress } = props;
+  const { name, description, platform, progress, deleteItem } = props;
   return (
     <Item>
       <Item.Content verticalAlign="middle">
@@ -14,7 +14,7 @@ const CurrentItem = props => {
             {name}
             <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
           </div>
-          <Button size="mini" circular icon color="red">
+          <Button size="mini" circular icon color="red" onClick={deleteItem}>
             <Icon name="remove" />
           </Button>
         </Item.Header>
@@ -42,6 +42,7 @@ CurrentItem.propTypes = {
   description: PropTypes.string.isRequired,
   platform: PropTypes.string.isRequired,
   progress: PropTypes.bool,
+  deleteItem: PropTypes.func.isRequired,
 };
 
 export default CurrentItem;

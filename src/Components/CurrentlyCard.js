@@ -33,6 +33,10 @@ const CurrentlyCard = () => {
     },
   ]);
 
+  function deleteItem() {
+    console.log('item is deleted!');
+  }
+
   function addItem() {
     const newItems = [...items, newItem];
     setItem(newItems);
@@ -56,6 +60,7 @@ const CurrentlyCard = () => {
               name={item.name}
               description={item.description}
               platform={item.platform}
+              deleteItem={deleteItem}
             />
           ))}
         </Item.Group>
