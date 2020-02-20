@@ -17,7 +17,6 @@ const CurrentlyCard = () => {
           />
           <CurrentItem
             name="Persona 5: The Royal"
-            progress
             platform="blue"
             description="Persona 5 Royal features an additional Phantom Thief member named Kasumi Yoshizawa, a new Palace, new music, 
             additional plot and social elements, a playable third semester, and support for the 
