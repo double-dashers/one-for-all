@@ -26,7 +26,7 @@ const panes = [
   {
     menuItem: 'Settings',
     render: () => (
-      <Tab.Pane attached="top">
+      <Tab.Pane attached="top" style={{ maxHeight: '600px', overflow: 'auto' }}>
         <UserSettings />
       </Tab.Pane>
     ),
