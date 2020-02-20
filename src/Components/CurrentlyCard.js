@@ -2,6 +2,39 @@ import React, { useState } from 'react';
 import { Card, Item, Button, Icon } from 'semantic-ui-react';
 import CurrentItem from './CurrentItem';
 
+const staticItems = [
+  {
+    name: 'Mega Man Zero/ZX Legacy Collection',
+    platform: 'red',
+    description:
+      'Mega Man Zero/ZX Legacy Collection brings together six classic titles in one game: Mega Man Zero 1, 2, 3, and 4, as well as Mega Man ZX and ZX Advent.',
+  },
+  {
+    name: 'Woodle Tree Adventures',
+    platform: 'red',
+    description:
+      'Woodle Tree Adventures is an old school platform game with a catchy and unique art style! Explore a total of 6 worlds and save the lands with the magical water drops youll find through your journey, bringing back peace and balance and finally becoming the new hero!',
+  },
+  {
+    name: 'Doom Eternal',
+    platform: 'blue',
+    description:
+      'Doom Eternal is an upcoming first-person shooter video game developed by id Software and published by Bethesda Softworks.',
+  },
+  {
+    name: 'Dreams',
+    platform: 'blue',
+    description:
+      "Dreams is a game creation system developed by Media Molecule and published by Sony Interactive Entertainment for the PlayStation 4. The game allows players to create user-generated content in the form of fully-fledged games, mechanics, assets, 3D sculptures, music, and art, which can then be shared or remixed to be used in other's creations.",
+  },
+  {
+    name: 'Tokyo Mirage Sessions #FE Encore',
+    platform: 'red',
+    description:
+      'An expanded port of the game for the Nintendo Switch, titled Tokyo Mirage Sessions ♯FE Encore, was released on January 17, 2020. The port includes new story content and additional party members along with new music.',
+  },
+];
+
 const newItem = {
   name: 'Woodle Tree Adventures',
   platform: 'red',
