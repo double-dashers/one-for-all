@@ -65,6 +65,11 @@ const CurrentlyCard = () => {
     },
   ]);
   const [modal, setModal] = useState(false);
+  const [selection, setSelection] = useState('');
+
+  function handleChange(e, { value }) {
+    setSelection(value);
+  }
 
   function deleteItem() {
     const { value } = this;
@@ -82,7 +87,7 @@ const CurrentlyCard = () => {
   }
 
   function handleSubmit() {
-    console.log(this);
+    console.log(selection);
   }
 
   // function addItem() {
@@ -108,7 +113,12 @@ const CurrentlyCard = () => {
           >
             <Modal.Header>Select a game to add!</Modal.Header>
             <Modal.Content>
-              <AddGameForm games={staticItems} handleSubmit={handleSubmit} />
+              <AddGameForm
+                games={staticItems}
+                handleSubmit={handleSubmit}
+                valueSelected={selection}
+                handleChange={handleChange}
+              />
             </Modal.Content>
           </Modal>
         </Card.Header>

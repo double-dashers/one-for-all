@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
 
 const AddGameForm = props => {
-  const { games, handleSubmit } = props;
+  const { games, handleSubmit, handleChange, valueSelected } = props;
+
   const selectArray = games.map(game => ({ key: game.key, text: game.name, value: game.name }));
-  const [selection, setSelection] = useState('');
-  function handleChange(e, { value }) {
-    setSelection(value);
-  }
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -17,7 +14,7 @@ const AddGameForm = props => {
         <label>
           Select a game to add to your list!
           <Dropdown
-            value={selection}
+            value={valueSelected}
             onChange={handleChange}
             fluid
             selection
@@ -34,6 +31,8 @@ AddGameForm.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   games: PropTypes.array.isRequired,
   handleSubmit: PropTypes.func.isRequired,
+  valueSelected: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default AddGameForm;
