@@ -5,30 +5,35 @@ import AddGameForm from './AddGameForm';
 
 const staticItems = [
   {
+    key: 0,
     name: 'Mega Man Zero/ZX Legacy Collection',
     platform: 'red',
     description:
       'Mega Man Zero/ZX Legacy Collection brings together six classic titles in one game: Mega Man Zero 1, 2, 3, and 4, as well as Mega Man ZX and ZX Advent.',
   },
   {
+    key: 1,
     name: 'Woodle Tree Adventures',
     platform: 'red',
     description:
       'Woodle Tree Adventures is an old school platform game with a catchy and unique art style! Explore a total of 6 worlds and save the lands with the magical water drops youll find through your journey, bringing back peace and balance and finally becoming the new hero!',
   },
   {
+    key: 2,
     name: 'Doom Eternal',
     platform: 'blue',
     description:
       'Doom Eternal is an upcoming first-person shooter video game developed by id Software and published by Bethesda Softworks.',
   },
   {
+    key: 3,
     name: 'Dreams',
     platform: 'blue',
     description:
       "Dreams is a game creation system developed by Media Molecule and published by Sony Interactive Entertainment for the PlayStation 4. The game allows players to create user-generated content in the form of fully-fledged games, mechanics, assets, 3D sculptures, music, and art, which can then be shared or remixed to be used in other's creations.",
   },
   {
+    key: 4,
     name: 'Tokyo Mirage Sessions #FE Encore',
     platform: 'red',
     description:
@@ -108,7 +113,7 @@ const CurrentlyCard = () => {
           >
             <Modal.Header>Select a game to add!</Modal.Header>
             <Modal.Content>
-              <AddGameForm />
+              <AddGameForm games={staticItems} />
             </Modal.Content>
           </Modal>
         </Card.Header>
