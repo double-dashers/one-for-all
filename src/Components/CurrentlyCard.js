@@ -41,13 +41,6 @@ const staticItems = [
   },
 ];
 
-const newItem = {
-  name: 'Woodle Tree Adventures',
-  platform: 'red',
-  description:
-    'Woodle Tree Adventures is an old school platform game with a catchy and unique art style! Explore a total of 6 worlds and save the lands with the magical water drops youll find through your journey, bringing back peace and balance and finally becoming the new hero!',
-};
-
 const CurrentlyCard = () => {
   const [items, setItem] = useState([
     {
@@ -81,12 +74,10 @@ const CurrentlyCard = () => {
   }
 
   function openModal() {
-    console.log('opening modal');
     setModal(true);
   }
 
   function closeModal() {
-    console.log('opening modal');
     setModal(false);
   }
 
