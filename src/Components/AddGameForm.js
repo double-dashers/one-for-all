@@ -7,7 +7,6 @@ const AddGameForm = props => {
   const selectArray = games.map(game => ({ key: game.key, text: game.name, value: game.name }));
   const [selection, setSelection] = useState('');
   function handleChange(e, { value }) {
-    console.log(value);
     setSelection(value);
   }
 
