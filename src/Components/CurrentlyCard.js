@@ -104,6 +104,7 @@ const CurrentlyCard = () => {
         >
           My current list
           <Modal
+            size="tiny"
             trigger={
               <Button circular icon color="teal" onClick={openModal}>
                 <Icon name="add circle" />
@@ -123,7 +124,7 @@ const CurrentlyCard = () => {
             </Modal.Content>
           </Modal>
         </Card.Header>
-        <Item.Group divided style={{ maxHeight: '425px', overflow: 'auto', paddingTop: '5px' }}>
+        <Item.Group divided style={{ maxHeight: '400px', overflow: 'auto', paddingTop: '5px' }}>
           {items.map((item, index) => (
             <CurrentItem
               key={item.name}
