@@ -10,7 +10,6 @@ const AddGameForm = props => {
     setValue(value);
   }
 
-  console.log(selectArray);
   return (
     <Form>
       <Form.Field>
