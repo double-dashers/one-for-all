@@ -81,6 +81,10 @@ const CurrentlyCard = () => {
     setModal(false);
   }
 
+  function handleSubmit() {
+    console.log(this);
+  }
+
   // function addItem() {
   //   const newItems = [...items, newItem];
   //   setItem(newItems);
@@ -104,7 +108,7 @@ const CurrentlyCard = () => {
           >
             <Modal.Header>Select a game to add!</Modal.Header>
             <Modal.Content>
-              <AddGameForm games={staticItems} />
+              <AddGameForm games={staticItems} handleSubmit={handleSubmit} />
             </Modal.Content>
           </Modal>
         </Card.Header>
