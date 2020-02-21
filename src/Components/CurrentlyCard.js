@@ -81,10 +81,10 @@ const CurrentlyCard = () => {
     setModal(false);
   }
 
-  function addItem() {
-    const newItems = [...items, newItem];
-    setItem(newItems);
-  }
+  // function addItem() {
+  //   const newItems = [...items, newItem];
+  //   setItem(newItems);
+  // }
 
   return (
     <Card raised fluid>

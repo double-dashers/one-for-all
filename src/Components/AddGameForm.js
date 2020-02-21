@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
 
 const AddGameForm = props => {
-  const { games, value, handleChange } = props;
-  const selectArray = games.map(game => ({ key: game.key, text: game.name }));
+  const { games } = props;
+  const selectArray = games.map(game => ({ key: game.key, text: game.name, value: game.name }));
+  const [value, setValue] = useState();
+  function handleChange() {
+    setValue(value);
+  }
+
+  console.log(selectArray);
   return (
     <Form>
       <Form.Field>
@@ -22,8 +28,6 @@ const AddGameForm = props => {
 AddGameForm.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   games: PropTypes.array.isRequired,
-  value: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
 };
 
 export default AddGameForm;
