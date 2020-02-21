@@ -86,14 +86,15 @@ const CurrentlyCard = () => {
     setModal(false);
   }
 
-  function handleSubmit() {
-    console.log(selection);
+  function addItem(selectedItem) {
+    const newItems = [...items, selectedItem];
+    setItem(newItems);
+    setModal(false);
   }
-
-  // function addItem() {
-  //   const newItems = [...items, newItem];
-  //   setItem(newItems);
-  // }
+  function handleSubmit() {
+    const myItem = staticItems.find(item => item.name === selection);
+    addItem(myItem);
+  }
 
   return (
     <Card raised fluid>
