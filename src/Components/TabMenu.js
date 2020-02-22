@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tab, Segment, Image } from 'semantic-ui-react';
 import ActivityFeed from './ActivityFeed';
+import UserSettings from './UserSettings';
 
 const panes = [
   {
@@ -25,11 +26,8 @@ const panes = [
   {
     menuItem: 'Settings',
     render: () => (
-      <Tab.Pane attached="top">
-        <Segment>
-          Tab 3 Content
-          <Image src="https://react.semantic-ui.com/images/wireframe/paragraph.png" />
-        </Segment>
+      <Tab.Pane attached="top" style={{ maxHeight: '600px', overflow: 'auto' }}>
+        <UserSettings />
       </Tab.Pane>
     ),
   },
