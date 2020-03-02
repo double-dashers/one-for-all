@@ -1,13 +1,10 @@
 import React from 'react';
-import { createUseStyles } from 'react-jss';
 import { Grid, Button, Message, Image, Form, Segment, Header } from 'semantic-ui-react';
+import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
   mainGrid: {
-    height: '100vw',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: '85vh',
   },
   formCol: {
     maxWidth: '450px',
