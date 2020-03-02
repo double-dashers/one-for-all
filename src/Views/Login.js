@@ -1,20 +1,25 @@
 import React from 'react';
+import { createUseStyles } from 'react-jss';
 import { Grid, Button, Message, Image, Form, Segment, Header } from 'semantic-ui-react';
 
+const useStyles = createUseStyles({
+  mainGrid: {
+    height: '100vw',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  formCol: {
+    maxWidth: '450px',
+  },
+});
+
 const Login = () => {
+  const classes = useStyles();
   return (
     <div>
-      <Grid
-        textAlign="center"
-        style={{
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-        verticalAlign="middle"
-      >
-        <Grid.Column style={{ maxWidth: '450px' }}>
+      <Grid textAlign="center" className={classes.mainGrid} verticalAlign="middle">
+        <Grid.Column className={classes.formCol}>
           <Header as="h2" color="teal" textAlign="center">
             <Image src="https://react.semantic-ui.com/logo.png" /> Log-in to your account
           </Header>
