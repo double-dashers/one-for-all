@@ -3,7 +3,7 @@ import { Grid, Button, Card, Icon, Image } from 'semantic-ui-react';
 
 const UserProfileCard = () => {
   return (
-    <Card centered>
+    <Card centered fluid>
       <Card.Content>
         <Grid>
           <Grid.Column mobile={16} tablet={6} computer={8}>
