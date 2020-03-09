@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 

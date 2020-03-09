@@ -4,21 +4,24 @@ import Profile from './Views/Profile';
 import Login from './Views/Login';
 import './App.css';
 import Layout from './Components/Layout';
+import WindowDimensionsProvider from './utils/WindowDimensionsProvider';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <div>
-          <Layout>
-            <Switch>
-              <Route exact path="/" component={Profile} />
-              <Route exact path="/login" component={Login} />
-            </Switch>
-          </Layout>
-        </div>
-      </Router>
-    </div>
+    <WindowDimensionsProvider>
+      <div>
+        <Router>
+          <div>
+            <Layout>
+              <Switch>
+                <Route exact path="/" component={Profile} />
+                <Route exact path="/login" component={Login} />
+              </Switch>
+            </Layout>
+          </div>
+        </Router>
+      </div>
+    </WindowDimensionsProvider>
   );
 }
 
