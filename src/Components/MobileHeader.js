@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Menu, Sidebar, Icon } from 'semantic-ui-react';
 
-const MobileHeader = () => {
+const MobileHeader = props => {
   const [visible, setVisible] = useState();
+  const { children } = props;
 
   function handleVisible() {
     setVisible(true);
@@ -40,9 +42,14 @@ const MobileHeader = () => {
             <img src="https://react.semantic-ui.com/logo.png" alt="placeholder" />
           </Menu.Item>
         </Menu>
+        {children}
       </Sidebar.Pusher>
     </Sidebar.Pushable>
   );
+};
+
+MobileHeader.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
 export default MobileHeader;
