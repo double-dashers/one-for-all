@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
+import { useWindowDimensions } from '../utils/WindowDimensionsProvider';
 import Header from './Header';
 
 const useStyles = createUseStyles({
@@ -10,11 +11,14 @@ const useStyles = createUseStyles({
 });
 
 const Layout = props => {
-  const { children } = props;
+  const { width } = useWindowDimensions();
+
+  const { children, breakpoint } = props;
   const classes = useStyles();
   return (
     <div>
-      <Header />
+      {width > breakpoint ? <Header /> : <div>Mobile Header goes here</div>}
+      {/* <Header /> */}
       <div>
         <main className={classes.main}>{children}</main>
       </div>
@@ -24,6 +28,7 @@ const Layout = props => {
 
 Layout.propTypes = {
   children: PropTypes.element.isRequired,
+  breakpoint: PropTypes.number.isRequired,
 };
 
 export default Layout;

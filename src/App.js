@@ -12,7 +12,7 @@ function App() {
       <div>
         <Router>
           <div>
-            <Layout>
+            <Layout breakpoint={767}>
               <Switch>
                 <Route exact path="/" component={Profile} />
                 <Route exact path="/login" component={Login} />
