@@ -23,22 +23,18 @@ const MobileHeader = props => {
         width="thin"
       >
         <Menu.Item as="a">
-          <Icon name="home" />
-          Home
+          <Icon name="user outline" />
+          Profile
         </Menu.Item>
         <Menu.Item as="a">
-          <Icon name="gamepad" />
-          Games
-        </Menu.Item>
-        <Menu.Item as="a">
-          <Icon name="camera" />
-          Channels
+          <Icon name="sign-in" />
+          Sign In
         </Menu.Item>
       </Sidebar>
 
       <Sidebar.Pusher dimmed={visible}>
         <Menu>
-          <Menu.Item onClick={handleVisible} style={{ flexGrow: '1' }}>
+          <Menu.Item onClick={handleVisible}>
             <img src="https://react.semantic-ui.com/logo.png" alt="placeholder" />
           </Menu.Item>
         </Menu>
