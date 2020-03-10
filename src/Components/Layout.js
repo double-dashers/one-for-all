@@ -16,15 +16,26 @@ const Layout = props => {
 
   const { children, breakpoint } = props;
   const classes = useStyles();
-  return (
-    <div>
-      {width > breakpoint ? <Header /> : <MobileHeader />}
-      {/* <Header /> */}
-      <div>
-        <main className={classes.main}>{children}</main>
-      </div>
-    </div>
-  );
+  let section;
+  if (width > breakpoint) {
+    section = (
+      <>
+        <Header />
+        <div>
+          <main className={classes.main}>{children}</main>
+        </div>
+      </>
+    );
+  } else {
+    section = (
+      <MobileHeader>
+        <div>
+          <main className={classes.main}>{children}</main>
+        </div>
+      </MobileHeader>
+    );
+  }
+  return <div>{section}</div>;
 };
 
 Layout.propTypes = {
