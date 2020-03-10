@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { createUseStyles } from 'react-jss';
 import Header from './Header';
 
-class Layout extends Component {
-  constructor(props) {
-    super(props);
+const useStyles = createUseStyles({
+  main: {
+    padding: '2vw',
+  },
+});
 
-    this.state = {};
-  }
-
-  render() {
-    const { children } = this.props;
-    return (
+const Layout = props => {
+  const { children } = props;
+  const classes = useStyles();
+  return (
+    <div>
+      <Header />
       <div>
-        <Header />
-        <div>
-          <main style={{ padding: '2vw' }}>{children}</main>
-        </div>
+        <main className={classes.main}>{children}</main>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.element.isRequired,

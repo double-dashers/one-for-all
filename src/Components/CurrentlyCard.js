@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
 import { Card, Item, Button, Icon, Modal } from 'semantic-ui-react';
+import { createUseStyles } from 'react-jss';
 import CurrentItem from './CurrentItem';
 import AddGameForm from './AddGameForm';
+
+const useStyles = createUseStyles({
+  cardHeader: {
+    display: 'flex !important',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  itemGroup: {
+    maxHeight: '400px',
+    overflow: 'auto',
+    paddingTop: '5px',
+  },
+});
 
 const staticItems = [
   {
@@ -96,12 +110,12 @@ const CurrentlyCard = () => {
     addItem(myItem);
   }
 
+  const classes = useStyles();
+
   return (
     <Card raised fluid>
       <Card.Content>
-        <Card.Header
-          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-        >
+        <Card.Header className={classes.cardHeader}>
           My current list
           <Modal
             size="tiny"
@@ -124,7 +138,7 @@ const CurrentlyCard = () => {
             </Modal.Content>
           </Modal>
         </Card.Header>
-        <Item.Group divided style={{ maxHeight: '400px', overflow: 'auto', paddingTop: '5px' }}>
+        <Item.Group divided className={classes.itemGroup}>
           {items.map((item, index) => (
             <CurrentItem
               key={item.name}

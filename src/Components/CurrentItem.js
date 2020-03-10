@@ -1,18 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Item, Rating, Icon, Progress, Button } from 'semantic-ui-react';
+import { createUseStyles } from 'react-jss';
+
+const useStyles = createUseStyles({
+  itemHeader: {
+    display: 'flex !important',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  itemIcon: {
+    paddingLeft: '10px',
+  },
+});
 
 const CurrentItem = props => {
   const { name, description, platform, progress, deleteItem, index } = props;
+  const classes = useStyles();
   return (
     <Item>
       <Item.Content verticalAlign="middle">
-        <Item.Header
-          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
-        >
+        <Item.Header className={classes.itemHeader}>
           <div>
             {name}
-            <Icon color={platform} name="game" style={{ paddingLeft: '10px' }} />
+            <Icon color={platform} name="game" className={classes.itemIcon} />
           </div>
           <Button value={index} size="mini" circular icon color="red" onClick={deleteItem}>
             <Icon name="remove" />
