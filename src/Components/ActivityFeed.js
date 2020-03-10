@@ -37,18 +37,6 @@ const events = [
       'https://react.semantic-ui.com/images/wireframe/image-text.png',
     ],
   },
-  {
-    date: '1 Hour Ago',
-    image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
-    meta: '4 Likes',
-    summary: 'Elliot Fu added you as a friend',
-  },
-  {
-    date: '1 Hour Ago',
-    image: 'https://react.semantic-ui.com/images/avatar/small/elliot.jpg',
-    meta: '4 Likes',
-    summary: 'Elliot Fu added you as a friend',
-  },
 ];
 const ActivityFeed = () => {
   return <Feed size="large" events={events} />;
