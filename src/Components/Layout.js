@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 import { useWindowDimensions } from '../utils/WindowDimensionsProvider';
 import Header from './Header';
+import MobileHeader from './MobileHeader';
 
 const useStyles = createUseStyles({
   main: {
@@ -17,7 +18,7 @@ const Layout = props => {
   const classes = useStyles();
   return (
     <div>
-      {width > breakpoint ? <Header /> : <div>Mobile Header goes here</div>}
+      {width > breakpoint ? <Header /> : <MobileHeader />}
       {/* <Header /> */}
       <div>
         <main className={classes.main}>{children}</main>
