@@ -16,7 +16,7 @@ function App() {
             <Layout breakpoint={767}>
               <Switch>
                 <Route exact path="/" component={Main} />
-                <Route exact path="profile" component={Profile} />
+                <Route exact path="/profile" component={Profile} />
                 <Route exact path="/login" component={Login} />
               </Switch>
             </Layout>
