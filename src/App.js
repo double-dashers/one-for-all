@@ -1,26 +1,27 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import Profile from './Views/Profile';
+import Profile from './Views/Profile';
 import Login from './Views/Login';
 import './App.css';
 import Layout from './Components/Layout';
-import Main from './Views/Main';
+import WindowDimensionsProvider from './utils/WindowDimensionsProvider';
 
 function App() {
   return (
-    <div>
-      <Router>
-        <div>
-          <Layout>
-            <Switch>
-              <Route exact path="/" component={Main} />
-              {/* <Route exact path="/profile" component={Profile} /> */}
-              <Route exact path="/login" component={Login} />
-            </Switch>
-          </Layout>
-        </div>
-      </Router>
-    </div>
+    <WindowDimensionsProvider>
+      <div>
+        <Router>
+          <div>
+            <Layout breakpoint={767}>
+              <Switch>
+                <Route exact path="/" component={Profile} />
+                <Route exact path="/login" component={Login} />
+              </Switch>
+            </Layout>
+          </div>
+        </Router>
+      </div>
+    </WindowDimensionsProvider>
   );
 }
 
