@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Grid, Container, Card } from 'semantic-ui-react';
 import { createUseStyles } from 'react-jss';
 import MyGameCard from '../Components/MyGameCard';
@@ -34,11 +34,21 @@ const staticArray = [
 const useStyles = createUseStyles({
   statusCard: {
     height: '650px',
+    overflow: 'hidden',
+  },
+  hoveredCard: {
+    height: '650px',
     overflow: 'auto',
   },
 });
 
 const Main = () => {
+  const [hovered, setHovered] = useState(false);
+
+  function handleHover() {
+    setHovered(!hovered);
+  }
+
   const classes = useStyles();
   return (
     <Container fluid>
@@ -51,7 +61,13 @@ const Main = () => {
           </Card>
         </Grid.Column>
         <Grid.Column mobile={16} tablet={4} computer={4}>
-          <Card raised fluid className={classes.statusCard}>
+          <Card
+            raised
+            fluid
+            className={hovered ? classes.hoveredCard : classes.statusCard}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleHover}
+          >
             <Card.Content>
               <Card.Header>Currently</Card.Header>
               {staticArray.map(item => (
