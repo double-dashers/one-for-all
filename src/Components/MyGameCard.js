@@ -1,30 +1,41 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Card, Image, Icon } from 'semantic-ui-react';
 
-const ac = 'http://images.nintendolife.com/56ac86549585a/ac.original.jpg';
-
-const MyGameCard = () => {
+const MyGameCard = props => {
+  const { image, name, release, genres } = props;
   return (
     <Card fluid>
-      <Image src={ac} />
+      <Image src={image} style={{ maxHeight: '120px' }} />
       <Card.Content>
-        <Card.Header>Animal Crossing: New Horizons</Card.Header>
+        <Card.Header>{name}</Card.Header>
         <Card.Meta>
           <span className="date">
             <Icon name="calendar" />
-            March 20th 2020
+            {release}
           </span>
         </Card.Meta>
-        <Card.Description>
+        {/* <Card.Description>
           Animal Crossing: New Horizons is an upcoming life simulation video game developed and
           published by Nintendo.
-        </Card.Description>
+        </Card.Description> */}
       </Card.Content>
       <Card.Content extra>
-        Genres: <a href="noref">Adventure</a>, <a href="noref">Simulation</a>
+        Genres:
+        {genres.map(genre => (
+          <a href="no-ref"> {genre} </a>
+        ))}
       </Card.Content>
     </Card>
   );
+};
+
+MyGameCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  release: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  genres: PropTypes.array.isRequired,
 };
 
 export default MyGameCard;
