@@ -38,7 +38,7 @@ const useStyles = createUseStyles({
   },
   hoveredCard: {
     height: '650px',
-    overflow: 'auto',
+    overflow: 'overlay',
   },
 });
 
