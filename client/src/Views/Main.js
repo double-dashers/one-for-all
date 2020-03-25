@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 import { Grid, Container } from 'semantic-ui-react';
 import KanbanContainer from '../Components/KanbanContainer';
 
 const Main = () => {
+  useEffect(() => {
+    async function getSomething() {
+      const myapi = await axios.get('/express_backend');
+      console.log(myapi.data);
+    }
+
+    getSomething();
+  }, []);
+
   return (
     <Container fluid>
       <Grid stackable columns={4}>
