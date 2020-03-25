@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss';
 import { Card, Modal, Icon, Button } from 'semantic-ui-react';
 import MyGameCard from './MyGameCard';
 import AddGameForm from './AddGameForm';
+import SearchAndAdd from './SearchAndAdd';
 
 const staticArray = [
   {
@@ -114,12 +115,13 @@ const KanbanContainer = props => {
           >
             <Modal.Header>Select a game to add!</Modal.Header>
             <Modal.Content>
-              <AddGameForm
+              {/* <AddGameForm
                 games={staticArray}
                 handleSubmit={handleSubmit}
                 valueSelected={selection}
                 handleChange={handleChange}
-              />
+              /> */}
+              <SearchAndAdd />
             </Modal.Content>
           </Modal>
         </Card.Header>
