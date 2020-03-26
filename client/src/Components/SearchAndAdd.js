@@ -6,12 +6,11 @@ import api from '../utils/API';
 const SearchAndAdd = () => {
   const [search, setSearch] = useState('');
   const [games, setGames] = useState();
+  
 
   async function handleSearch() {
-    console.log(search);
     const myResult = await api.searchGames(search);
     setGames(myResult.data.results);
-    console.log(myResult.data.results);
   }
 
   function handleChange(e, { value }) {
