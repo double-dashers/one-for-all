@@ -4,14 +4,14 @@ import { Grid, Container } from 'semantic-ui-react';
 import KanbanContainer from '../Components/KanbanContainer';
 
 const Main = () => {
-  useEffect(() => {
-    async function getSomething() {
-      const myapi = await axios.get('/express_backend');
-      console.log(myapi.data);
-    }
+  // useEffect(() => {
+  //   async function getSomething() {
+  //     const myapi = await axios.get('/express_backend');
+  //     console.log(myapi.data);
+  //   }
 
-    getSomething();
-  }, []);
+  //   getSomething();
+  // }, []);
 
   return (
     <Container fluid>
