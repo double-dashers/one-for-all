@@ -22,6 +22,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "linebreak-style": [0, "windows"],
         "prettier/prettier": "error"
     }
 }

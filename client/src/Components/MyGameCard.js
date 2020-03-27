@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const MyGameCard = props => {
+const MyGameCard = (props) => {
   const { image, name, release, genres, index, deleteItem } = props;
   const classes = useStyles();
   return (
@@ -37,7 +37,7 @@ const MyGameCard = props => {
       </Card.Content>
       <Card.Content extra>
         Genres:
-        {genres.map(genre => (
+        {genres.map((genre) => (
           <a href="no-ref"> {genre} </a>
         ))}
       </Card.Content>

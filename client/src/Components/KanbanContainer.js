@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const KanbanContainer = props => {
+const KanbanContainer = (props) => {
   const [hovered, setHovered] = useState(false);
   const [modal, setModal] = useState(false);
   const [selection, setSelection] = useState('');
@@ -86,7 +86,7 @@ const KanbanContainer = props => {
   }
 
   function handleSubmit() {
-    const myItem = staticArray.find(item => item.name === selection);
+    const myItem = staticArray.find((item) => item.name === selection);
     addItem(myItem);
   }
 

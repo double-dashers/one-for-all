@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Button, Dropdown } from 'semantic-ui-react';
 
-const AddGameForm = props => {
+const AddGameForm = (props) => {
   const { games, handleSubmit, handleChange, valueSelected } = props;
 
-  const selectArray = games.map(game => ({ key: game.key, text: game.name, value: game.name }));
+  const selectArray = games.map((game) => ({ key: game.key, text: game.name, value: game.name }));
 
   return (
     <Form onSubmit={handleSubmit}>

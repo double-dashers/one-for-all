@@ -106,7 +106,7 @@ const CurrentlyCard = () => {
     setModal(false);
   }
   function handleSubmit() {
-    const myItem = staticItems.find(item => item.name === selection);
+    const myItem = staticItems.find((item) => item.name === selection);
     addItem(myItem);
   }
 

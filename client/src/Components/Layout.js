@@ -11,7 +11,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const Layout = props => {
+const Layout = (props) => {
   const { width } = useWindowDimensions();
 
   const { children, breakpoint } = props;

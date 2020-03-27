@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Sidebar, Icon } from 'semantic-ui-react';
 
-const MobileHeader = props => {
+const MobileHeader = (props) => {
   const [visible, setVisible] = useState();
   const { children } = props;
 

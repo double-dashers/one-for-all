@@ -6,7 +6,6 @@ import api from '../utils/API';
 const SearchAndAdd = () => {
   const [search, setSearch] = useState('');
   const [games, setGames] = useState();
-  
 
   async function handleSearch() {
     const myResult = await api.searchGames(search);

@@ -14,7 +14,7 @@ const useStyles = createUseStyles({
   },
 });
 
-const CurrentItem = props => {
+const CurrentItem = (props) => {
   const { name, description, platform, progress, deleteItem, index } = props;
   const classes = useStyles();
   return (
