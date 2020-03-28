@@ -130,7 +130,7 @@ const KanbanContainer = (props) => {
             key={item.name}
             name={item.name}
             image={item.image}
-            release={item.release}
+            released={item.release}
             genres={item.genres}
             index={index}
             deleteItem={deleteItem}

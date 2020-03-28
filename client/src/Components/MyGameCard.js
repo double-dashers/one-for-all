@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
 });
 
 const MyGameCard = (props) => {
-  const { image, name, release, genres, index, deleteItem } = props;
+  const { image, name, released, genres, index, deleteItem } = props;
   const classes = useStyles();
   return (
     <Card fluid>
@@ -27,13 +27,9 @@ const MyGameCard = (props) => {
         <Card.Meta>
           <span className="date">
             <Icon name="calendar" />
-            {release}
+            {released}
           </span>
         </Card.Meta>
-        {/* <Card.Description>
-          Animal Crossing: New Horizons is an upcoming life simulation video game developed and
-          published by Nintendo.
-        </Card.Description> */}
       </Card.Content>
       <Card.Content extra>
         Genres:
@@ -48,7 +44,7 @@ const MyGameCard = (props) => {
 MyGameCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  release: PropTypes.string.isRequired,
+  released: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   genres: PropTypes.array.isRequired,
   index: PropTypes.number.isRequired,
